@@ -1,0 +1,19 @@
+{
+  "name": "bets10-proxy",
+  "version": "2.0.0",
+  "description": "Bets10 HTTP Proxy with Admin Panel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "got-scraping": "^3.0.0",
+    "hpagent": "^1.2.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

